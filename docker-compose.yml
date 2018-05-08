@@ -4,20 +4,33 @@ services:
   db:
     image: mysql:5.7
     volumes:
-      - db_data:/var/lib/mysql
+      - ./db:/var/lib/mysql
     restart: always
     env_file:
       - ./.env
 
-  wordpress:
+  development:
     depends_on:
       - db
-    image: wordpress:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    volumes:
+      - ./:/var/www/html
     ports:
       - "8000:80"
     restart: always
     env_file:
       - ./.env
 
-volumes:
-  db_data:
+  production:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    ports:
+      - "8000:80"
+    restart: always
+    env_file:
+      - ./.env
