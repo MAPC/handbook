@@ -1,0 +1,120 @@
+/*
+Theme Name: MAPC
+Author: MAPC Digital Services
+Description: Wordpress theme for the Metropolitan Area Planning Council following the United States Web Design Standards
+Version: 0.0.1
+Tags: uswds
+*/
+
+/* Login page --------------------------------------------------------------- */
+
+
+/* Main navigation ---------------------------------------------------------- */
+
+.mapc-nav {
+  border-bottom: 1px solid #d6d7d9;
+}
+
+.mapc-nav .usa-nav-primary {
+  margin: 0 -1.5rem;
+}
+
+.mapc-nav .usa-nav-primary li {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 951px) {
+  .mapc-nav .usa-nav-primary a {
+    padding: 1.3rem 1.5rem 1.6rem;
+  }
+
+  .usa-nav-link:hover span,
+  .usa-nav-primary .usa-current span {
+    border-bottom: .6rem solid #0071bc;
+    padding-bottom: .8rem;
+  }
+}
+
+.mapc-header {
+  background-color: #0A4D81;
+}
+
+.mapc-header .usa-logo-text a {
+  color: white;
+}
+
+.mapc-header .usa-navbar {
+  width: 50%;
+}
+
+.mapc-header .mapc-login-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mapc-header .mapc-login-nav span {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.mapc-header .usa-nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mapc-login-nav {
+  position: relative;
+  flex: 1;
+}
+
+.mapc-login-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.mapc-login-nav ul li {
+  margin-left: 1em;
+}
+
+.mapc-header .usa-logo-text {
+}
+
+.mapc-breadcrumb {
+  color: grey;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+body.wp-editor {
+  font-family: inherit;
+  margin: 2rem;
+}
+
+body.wp-editor *:first-child {
+  margin-top: 0;
+}
+
+code {
+  padding: 2px 4px;
+  margin: 0;
+  border-radius: 2px;
+  color: #222;
+  background: #f2f4f5;
+}
+
+blockquote {
+  line-height: 1.5;
+  margin: 1em 0;
+  padding-left: 2em;
+  border-left: 0.5em solid #f2f4f5;
+  font-style: italic;
+}
+
