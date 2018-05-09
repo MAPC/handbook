@@ -31,6 +31,7 @@ services:
       dockerfile: Dockerfile.production
     ports:
       - "8000:80"
+      - "636:636"
     restart: always
     env_file:
       - ./.env
