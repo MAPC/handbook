@@ -51,6 +51,16 @@
               }
               $output .= '</ul>';
             }
+            // $children = get_pages( array( 'parent' => $pg->ID ) );
+            // if ( count($children ) ) {
+            //   $output .= '<ul class="usa-sidenav-sub_list">';
+            //   foreach ( $children as $c_id => $c_pg ) {
+            //     $c_title = apply_filters( 'the_title', $c_pg->post_title, $c_id );
+            //     $c_link = get_page_link($c_pg->ID);
+            //     $output .= '<a href="'.$c_link.'"">'.$c_title.'</a>';
+            //   }
+            //   $output .= '</ul>';
+            // }
           } else {
             $output .= '<a href="'.$link.'"">'.$title.'</a>';
           }

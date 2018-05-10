@@ -29,8 +29,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
+    volumes:
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
     ports:
       - "8000:80"
+      - "636:636"
     restart: always
     env_file:
       - ./.env

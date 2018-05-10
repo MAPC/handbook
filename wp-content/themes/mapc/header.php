@@ -19,33 +19,35 @@ $user = wp_get_current_user();
   <header class="usa-header usa-header-basic mapc-header" role="banner">
     <?php get_template_part( 'template-parts/header/gov-banner'); ?>
     <div class="usa-nav-container">
+
       <div class="usa-navbar">
         <div class="usa-logo" id="logo">
           <em class="usa-logo-text">
             <a href="/" accesskey="1" title="Home" aria-label="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
           </em>
         </div>
+        <nav class="mapc-login-nav">
+          <ul class="usa-unstyled-list">
+            <?php if ( is_user_logged_in() ): ?>
+              <li>
+                <span class="account-item"><?php echo $user->display_name; ?></span>
+              </li>
+              <li>
+                <a class="usa-footer-primary-link account-item" href="<?php echo wp_logout_url() ?>">
+                  Log Out
+                </a>
+              </li>
+            <?php else: ?>
+              <li>
+                <a class="usa-footer-primary-link account-item" href="<?php echo wp_login_url() ?>">
+                  Log In
+                </a>
+              </li>
+            <?php endif; ?>
+          </ul>
+        </nav>
+        <button class="usa-menu-btn">Menu</button>
       </div>
-      <nav class="mapc-login-nav">
-        <ul class="usa-unstyled-list">
-          <?php if ( is_user_logged_in() ): ?>
-            <li>
-              <span class="account-item"><?php echo $user->display_name; ?></span>
-            </li>
-            <li>
-              <a class="usa-footer-primary-link account-item" href="<?php echo wp_logout_url() ?>">
-                Log Out
-              </a>
-            </li>
-          <?php else: ?>
-            <li>
-              <a class="usa-footer-primary-link account-item" href="<?php echo wp_login_url() ?>">
-                Log In
-              </a>
-            </li>
-          <?php endif; ?>
-        </ul>
-      </nav>
     </div>
   </header>
   <?php get_template_part( 'template-parts/navigation/navigation'); ?>
