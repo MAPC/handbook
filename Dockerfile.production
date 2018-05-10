@@ -12,3 +12,4 @@ RUN docker-php-ext-install ldap;
 
 # Copy Wordpress files into container
 COPY . /var/www/html
+RUN chmod 755 /var/www/html/wp-content
