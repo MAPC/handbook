@@ -12,6 +12,7 @@ $user = wp_get_current_user();
     <title><?php bloginfo( 'name' ); ?></title>
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/uswds/css/uswds.min.css">
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
+
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?> class="layout-demo">
@@ -46,6 +47,7 @@ $user = wp_get_current_user();
             <?php endif; ?>
           </ul>
         </nav>
+
         <button class="usa-menu-btn">Menu</button>
       </div>
     </div>

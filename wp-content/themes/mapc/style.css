@@ -20,6 +20,29 @@ Tags: uswds
   padding-right: 1rem;
 }
 
+.mapc-nav .mapc-nav-row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.mapc-nav .mapc-nav-menu {
+  flex: 1;
+}
+
+.mapc-nav .mapc-nav-row .usa-search {
+  margin: 0;
+  top: 0;
+}
+
+.mapc-nav .mapc-nav-row .usa-search button {
+  border-radius: 0;
+}
+
+.mapc-nav .mapc-nav-row .usa-search input {
+  border: .1rem solid #0A4D81;
+}
+
 .mapc-header .mapc-login-nav {
   padding-right: 1em;
 }
@@ -27,7 +50,6 @@ Tags: uswds
 .admin-bar .usa-nav{
   padding-top: calc(2rem + 46px);
 }
-
 
 .mapc-header {
   background-color: #0A4D81;
@@ -81,6 +103,15 @@ Tags: uswds
   margin-bottom: 1rem;
 }
 
+.mapc-search-results header .query {
+  /*color: #0A4D81;*/
+  /*border-bottom: 2px dotted #0A4D81;*/
+}
+
+.mapc-search-results h1 {
+  margin-top: 0px !important;
+}
+
 body.wp-editor {
   font-family: inherit;
   margin: 2rem;
@@ -124,6 +155,9 @@ blockquote {
   }
   .mapc-nav .usa-nav-primary {
     margin: 0 -1.5rem;
+  }
+  .mapc-nav .mapc-nav-row {
+    flex-direction: row;
   }
   .usa-nav {
     float: none;
