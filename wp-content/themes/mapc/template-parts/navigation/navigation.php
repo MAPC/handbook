@@ -11,6 +11,26 @@ $user = wp_get_current_user();
   </button>
   <div class="usa-nav-container">
     <div class="mapc-nav-row">
+      <nav class="mapc-login-nav side-menu">
+        <ul class="usa-unstyled-list">
+          <?php if ( is_user_logged_in() ): ?>
+            <li>
+              <span class="account-item"><?php echo $user->display_name; ?></span>
+            </li>
+            <li>
+              <a class="usa-footer-primary-link account-item" href="<?php echo wp_logout_url() ?>">
+                Log Out
+              </a>
+            </li>
+          <?php else: ?>
+            <li>
+              <a class="usa-footer-primary-link account-item" href="<?php echo wp_login_url() ?>">
+                Log In
+              </a>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </nav>
       <div class="mapc-nav-menu">
         <?php
           wp_nav_menu( array(

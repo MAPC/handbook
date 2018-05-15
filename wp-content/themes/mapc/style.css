@@ -6,8 +6,20 @@ Version: 0.0.1
 Tags: uswds
 */
 
-/* Login page --------------------------------------------------------------- */
+.usa-logo img {
+  height: 2.5rem;
+  margin-right: 1rem;
+}
 
+.usa-logo {
+  display: flex;
+  align-items: center;
+  float: none;
+}
+
+.usa-menu-btn {
+  float: none;
+}
 
 /* Main navigation ---------------------------------------------------------- */
 
@@ -43,8 +55,19 @@ Tags: uswds
   border: .1rem solid #0A4D81;
 }
 
+.mapc-login-nav.side-menu {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.mapc-login-nav.side-menu ul {
+  justify-content: space-between;
+  width: 100%;
+}
+
 .mapc-header .mapc-login-nav {
   padding-right: 1em;
+  display: none;
 }
 
 .admin-bar .usa-nav{
@@ -93,7 +116,7 @@ Tags: uswds
   justify-content: flex-end;
 }
 
-.mapc-login-nav ul li {
+.mapc-login-nav ul li:not(:first-child) {
   margin-left: 1em;
 }
 
@@ -103,13 +126,12 @@ Tags: uswds
   margin-bottom: 1rem;
 }
 
-.mapc-search-results header .query {
-  /*color: #0A4D81;*/
-  /*border-bottom: 2px dotted #0A4D81;*/
-}
-
 .mapc-search-results h1 {
   margin-top: 0px !important;
+}
+
+.mapc-nav .mapc-nav-row > * {
+  width: 100%;
 }
 
 body.wp-editor {
@@ -143,11 +165,26 @@ blockquote {
   }
 }
 
+@media screen and (min-width: 520px) {
+  .mapc-header .mapc-login-nav {
+    display: block;
+  }
+
+  .mapc-login-nav.side-menu {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 951px) {
+  .usa-logo img {
+    height: 4rem;
+  }
   .mapc-nav .usa-nav-primary a {
     padding: 1.3rem 1.5rem 1.6rem;
   }
-
+  .mapc-nav .mapc-nav-row > * {
+    width: auto;
+  }
   .usa-nav-link:hover span,
   .usa-nav-primary .usa-current span {
     border-bottom: .6rem solid #0071bc;

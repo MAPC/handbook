@@ -24,6 +24,7 @@ $user = wp_get_current_user();
 
         <div class="usa-navbar">
           <div class="usa-logo" id="logo">
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/mapc-logo.svg" alt="The MAPC logo."/>
             <em class="usa-logo-text">
               <a href="/" accesskey="1" title="Home" aria-label="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
             </em>
@@ -48,7 +49,6 @@ $user = wp_get_current_user();
               <?php endif; ?>
             </ul>
           </nav>
-
           <button class="usa-menu-btn">Menu</button>
         </div>
       </div>
