@@ -43,13 +43,11 @@ $user = wp_get_current_user();
         ?>
       </div>
       <form role="search" class="usa-search usa-search-small" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <div>
           <label class="usa-sr-only" for="search-field-small">Search small</label>
           <input id="search-field-small" type="search" name="s" value="<?php echo get_search_query(); ?>">
           <button type="submit">
             <span class="usa-sr-only">Search</span>
           </button>
-        </div>
       </form>
     </div>
   </div>

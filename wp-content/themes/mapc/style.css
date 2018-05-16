@@ -6,6 +6,8 @@ Version: 0.0.1
 Tags: uswds
 */
 
+/* Site branding ------------------------------------------------------------ */
+
 .usa-logo img {
   height: 2.5rem;
   margin-right: 1rem;
@@ -18,13 +20,14 @@ Tags: uswds
 }
 
 .usa-menu-btn {
+  background-color: #78B520;
   float: none;
 }
 
 /* Main navigation ---------------------------------------------------------- */
 
 .mapc-nav {
-  border-bottom: 1px solid #d6d7d9;
+  border-bottom: 1px solid #78B520;
 }
 
 .mapc-nav .usa-nav-primary li {
@@ -45,14 +48,17 @@ Tags: uswds
 .mapc-nav .mapc-nav-row .usa-search {
   margin: 0;
   top: 0;
+  display: flex;
 }
 
 .mapc-nav .mapc-nav-row .usa-search button {
   border-radius: 0;
+  background-color: #78B520;
 }
 
 .mapc-nav .mapc-nav-row .usa-search input {
-  border: .1rem solid #0A4D81;
+  border: .1rem solid #78B520;
+  float: none;
 }
 
 .mapc-login-nav.side-menu {
@@ -73,6 +79,8 @@ Tags: uswds
 .admin-bar .usa-nav{
   padding-top: calc(2rem + 46px);
 }
+
+/* Sidebar ------------------------------------------------------------------ */
 
 .mapc-header {
   background-color: #0A4D81;
@@ -187,8 +195,13 @@ blockquote {
   }
   .usa-nav-link:hover span,
   .usa-nav-primary .usa-current span {
-    border-bottom: .6rem solid #0071bc;
+    border-bottom: .6rem solid #78B520;
     padding-bottom: .8rem;
+
+  }
+  .usa-nav-link:hover span,
+  .usa-current .usa-nav-link:hover span {
+    color: #78B520;
   }
   .mapc-nav .usa-nav-primary {
     margin: 0 -1.5rem;
