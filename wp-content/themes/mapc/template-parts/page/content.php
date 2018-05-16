@@ -14,4 +14,4 @@
       'after'  => '</div>',
     ) );
   ?>
-</article><!-- #post-## -->
+</article>

@@ -6,13 +6,28 @@ Version: 0.0.1
 Tags: uswds
 */
 
-/* Login page --------------------------------------------------------------- */
+/* Site branding ------------------------------------------------------------ */
 
+.usa-logo img {
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.usa-logo {
+  display: flex;
+  align-items: center;
+  float: none;
+}
+
+.usa-menu-btn {
+  background-color: #78B520;
+  float: none;
+}
 
 /* Main navigation ---------------------------------------------------------- */
 
 .mapc-nav {
-  border-bottom: 1px solid #d6d7d9;
+  border-bottom: 1px solid #78B520;
 }
 
 .mapc-nav .usa-nav-primary li {
@@ -20,14 +35,50 @@ Tags: uswds
   padding-right: 1rem;
 }
 
+.mapc-nav .mapc-nav-row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.mapc-nav .mapc-nav-menu {
+  flex: 1;
+}
+
+.mapc-nav .mapc-nav-row .usa-search {
+  margin: 0;
+  top: 0;
+  display: flex;
+}
+
+.mapc-nav .mapc-nav-row .usa-search button {
+  border-radius: 0;
+  background-color: #78B520;
+}
+
+.mapc-nav .mapc-nav-row .usa-search input {
+  border: .1rem solid #78B520;
+  float: none;
+}
+
+.mapc-login-nav.side-menu {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.mapc-login-nav.side-menu ul {
+  justify-content: space-between;
+  width: 100%;
+}
+
 .mapc-header .mapc-login-nav {
   padding-right: 1em;
+  display: none;
 }
 
 .admin-bar .usa-nav{
   padding-top: calc(2rem + 46px);
 }
-
 
 .mapc-header {
   background-color: #0A4D81;
@@ -71,7 +122,7 @@ Tags: uswds
   justify-content: flex-end;
 }
 
-.mapc-login-nav ul li {
+.mapc-login-nav ul li:not(:first-child) {
   margin-left: 1em;
 }
 
@@ -80,6 +131,16 @@ Tags: uswds
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+.mapc-search-results h1 {
+  margin-top: 0px !important;
+}
+
+.mapc-nav .mapc-nav-row > * {
+  width: 100%;
+}
+
+/* Content and editor ------------------------------------------------------- */
 
 body.wp-editor {
   font-family: inherit;
@@ -112,18 +173,41 @@ blockquote {
   }
 }
 
+@media screen and (min-width: 520px) {
+  .mapc-header .mapc-login-nav {
+    display: block;
+  }
+
+  .mapc-login-nav.side-menu {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 951px) {
+  .usa-logo img {
+    height: 4rem;
+  }
   .mapc-nav .usa-nav-primary a {
     padding: 1.3rem 1.5rem 1.6rem;
   }
-
+  .mapc-nav .mapc-nav-row > * {
+    width: auto;
+  }
   .usa-nav-link:hover span,
   .usa-nav-primary .usa-current span {
-    border-bottom: .6rem solid #0071bc;
+    border-bottom: .6rem solid #78B520;
     padding-bottom: .8rem;
+
+  }
+  .usa-nav-link:hover span,
+  .usa-current .usa-nav-link:hover span {
+    color: #78B520;
   }
   .mapc-nav .usa-nav-primary {
     margin: 0 -1.5rem;
+  }
+  .mapc-nav .mapc-nav-row {
+    flex-direction: row;
   }
   .usa-nav {
     float: none;
