@@ -80,8 +80,6 @@ Tags: uswds
   padding-top: calc(2rem + 46px);
 }
 
-/* Sidebar ------------------------------------------------------------------ */
-
 .mapc-header {
   background-color: #0A4D81;
 }
@@ -141,6 +139,8 @@ Tags: uswds
 .mapc-nav .mapc-nav-row > * {
   width: 100%;
 }
+
+/* Content and editor ------------------------------------------------------- */
 
 body.wp-editor {
   font-family: inherit;
